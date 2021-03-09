@@ -17,10 +17,19 @@
 
 // import("./modules/global-effects.mjs").then(() => console.log(global.test));
 
-const env = "development";
+// const env = "development";
 
-if (env === "development") {
-  await import("./modules/global-effects.mjs");
-  console.log(global.test);
-  console.log("hey! we're in DEV. let's party!");
-}
+// if (env === "development") {
+//   await import(`./modules/${"global-effects"}.mjs`);
+//   console.log(global.test);
+//   console.log("hey! we're in DEV. let's party!");
+// }
+
+// lesson 3: import module exports by name
+// Form here out, we'll use the static import style because there's more we can do with static imports
+// * import a named function
+// * (note code completion in VSCode)
+
+import { myNamedFunction, someText } from "./modules/named-exports.mjs";
+myNamedFunction();
+console.log(someText);
