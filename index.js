@@ -6,7 +6,7 @@
 // * global code is global code, even if in a module
 // * this is useful for setup in a global environment like with styling in a React project.
 
-// import "./lesson/1-modules-leak.mjs";
+// import "./modules/global-effects.mjs";
 // console.log(global.test);
 
 // lesson 2: modules can be imported asyncronously
@@ -15,12 +15,12 @@
 // * we can alse use await
 // * and add conditionals
 
-// import("./lesson/1-modules-leak.mjs").then(() => console.log(global.test));
+// import("./modules/global-effects.mjs").then(() => console.log(global.test));
 
-const env = "production";
+const env = "development";
 
 if (env === "development") {
-  await import("./lesson/1-modules-leak.mjs");
+  await import("./modules/global-effects.mjs");
   console.log(global.test);
   console.log("hey! we're in DEV. let's party!");
 }
