@@ -25,11 +25,24 @@
 //   console.log("hey! we're in DEV. let's party!");
 // }
 
-// lesson 3: import module exports by name
+// lesson 3: modules encapsulate code (if not global)
+// Form here out, we'll use the static import style because there's more we can do with static imports
+// * import from a module that has function declarations or variable assignments
+
+// import "./modules/scratch.mjs";
+
+// lesson 4: the export keyword makes code importable
 // Form here out, we'll use the static import style because there's more we can do with static imports
 // * import a named function
+// * import a named text
 // * (note code completion in VSCode)
 
-import { myNamedFunction, someText } from "./modules/named-exports.mjs";
-myNamedFunction();
-console.log(someText);
+// import { myNamedFunction, someText } from "./modules/named-exports.mjs";
+// myNamedFunction();
+// console.log(someText);
+
+// lesson 5: import module exports by name
+
+// lesson: module with export block
+import { greet } from "./modules/export-block.mjs";
+console.log(greet());
