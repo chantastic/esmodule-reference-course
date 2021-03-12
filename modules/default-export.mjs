@@ -2,7 +2,7 @@ export default function generateMitLicense(
   legalName,
   year = new Date().getFullYear()
 ) {
-  return ```MIT License
+  return `MIT License
 
 Copyright (c) ${year} ${legalName}
 
@@ -23,5 +23,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```;
+`;
 }

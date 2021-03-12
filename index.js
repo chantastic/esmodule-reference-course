@@ -54,5 +54,5 @@
 
 // example use of pre-formed modules
 // export-list
-import { chant } from "./modules/export-list.mjs";
-chant("We're number one");
+import { greetName } from "./modules/renamed-exports.mjs";
+console.log(greetName("michael"));

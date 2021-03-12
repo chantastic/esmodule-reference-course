@@ -1,4 +1,4 @@
-# ES Modules Referenc Course with @chantastic
+# ES Modules Reference Course with @chantastic
 
 ES Modules (JavaScript Modules, if you like) help us structure, organize and isolate code.
 
@@ -8,7 +8,7 @@ These reference course focuses on the ES Modules features available in a Node.js
 
 - Clone this repo to a local directory and enter the directory
 - run `npm install` to get the environment dependencies
-- run `npm start` to run the `nodemon` watch script. this will re-run `index.js` evertime you save a file in the project directory
+- run `npm start` to run the `nodemon` watch script. this will re-run `index.js` ever time you save a file in the project directory
 
 ## Project structure
 
@@ -20,11 +20,11 @@ Examples in `readme.md` can be copy/pasted into `index.js`.
 
 ### `readme.md`
 
-`readme.md` is where all the written excersises live. If you're watching this in workshop form, I'll lead you you thru all the steps. If you're reading it, you can follow the [assignments](#assignemnts) linearly.
+`readme.md` is where all the written exercises live. If you're watching this in workshop form, I'll lead you thru all the steps. If you're reading it, you can follow the [assignments](#assignemnts) linearly.
 
 ### `./modules`
 
-`./modules` incudes a number prepared module files. The names relate to the type of content inside. Various examples might use these prepared modules to explore a concept.
+`./modules` includes a number prepared module files. The names relate to the type of content inside. Various examples might use these prepared modules to explore a concept.
 
 ### `./modules/assignment.mjs`
 
@@ -117,7 +117,7 @@ Importing specific imports from a module requires the `from` keyword before the 
 
 `import { fallbackName, greet } from "./modules/assignment.js";`
 
-_Note that an `export` list is commonly at the end of a file to guarantee that everything exported — or referenced — already exsits._
+_Note that an `export` list is commonly at the end of a file to guarantee that everything exported — or referenced — already exists_
 
 #### Assignment
 
@@ -185,7 +185,7 @@ TODO
 
 TODO
 
-### 11. Aggregat emodules with `export from` ("emport")
+### 11. Aggregate modules with `export from` ("emport")
 
 TODO
 

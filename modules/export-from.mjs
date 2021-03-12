@@ -1,4 +1,4 @@
-export { capitalize } from "lodash";
+export { default as capitalize } from "lodash.capitalize";
 
-// alternatively rename with `as`:
-// export { capitalize as sentenceCase } from "lodash";
+// note:
+// `lodash` doesn't work with CommonJS modules

@@ -1,7 +1,8 @@
 // This module has no discernable style and is diffifult to read.
 // But it shows how all options may be used together.
 
-export { capitalize } from "lodash";
+// capitalize is not available locally. it is passed thru
+export { default as capitalize } from "lodash.capitalize";
 
 let fallbackGreetingText = "there";
 
@@ -14,13 +15,14 @@ function hype(phrase) {
 }
 
 function chant(phrase) {
+  // This function will throw because `capitalize` is passed thru
   return [...Array(3)].map(() => `${capitalize(phrase)}! `).trim();
 }
 
 export { hype, chant as chantPhrase, generateMitLicense as default };
 
 function generateMitLicense(legalName, year = new Date().getFullYear()) {
-  return ```MIT License
+  return `MIT License
 
 Copyright (c) ${year} ${legalName}
 
@@ -41,5 +43,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-```;
+`;
 }
