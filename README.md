@@ -1,5 +1,8 @@
 # ES Modules Reference Course with @chantastic
 
+This is the course material for `ES Modules Reference` on [lunch.dev](lunch.dev).
+A video of this workshop is provided to members.
+
 ES Modules (JavaScript Modules, if you like) help us structure, organize and isolate code.
 
 These reference course focuses on the ES Modules features available in a Node.js environment. I've chosen node because most JavaScript applications today (early 2021) still go thru some form of bundling before being sent to the browser. The features we cover should be common to all Node.js bundling tools (Webpack, Rollup, esbuild) (the latest LTS) Node.js environments (v14+).
