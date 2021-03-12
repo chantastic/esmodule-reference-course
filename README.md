@@ -2,7 +2,7 @@
 
 ES Modules (JavaScript Modules, if you like) help us structure, organize and isolate code.
 
-These reference course focuses on the ES Modules features available in a Node.js environment. I've chosen node because most JavaScript applications today (early 2021) still go thru some form of bundling before being sent to the browser. The features we cover should be common to all Node.js bundling tools (Webpack, Rollup, esbuild) used in modern Node.js environments (v10+).
+These reference course focuses on the ES Modules features available in a Node.js environment. I've chosen node because most JavaScript applications today (early 2021) still go thru some form of bundling before being sent to the browser. The features we cover should be common to all Node.js bundling tools (Webpack, Rollup, esbuild) (the latest LTS) Node.js environments (v14+).
 
 ## Get started
 
@@ -47,8 +47,9 @@ Import the `assignment.mjs` module using the `import` keyword and file path.
 
 ### 2. Make your module leaky (temporarily)
 
-The first thing to know about modules is that they leak. They don't perfectly encapsulate all code.
-That sounds bad (and it can be) but it's an important feature.
+The first thing to know about modules is that they leak. They don't perfectly encapsulate all code. Global code is global code, even if in a module.
+
+This might sounds bad (and it can be) but it's an important feature.
 
 #### Assignment
 
@@ -78,6 +79,8 @@ Take a stab at handling that promise using `.then()` or `await`.
 #### Discuss
 
 Using `.then()` to resolve the Promise, how might this change the order of execution?
+
+What are two places where loading modules dynamically might be useful?
 
 ### 4. Add a function declaration and variable to the module
 
@@ -178,35 +181,22 @@ TODO
 
 TODO
 
-### 11. 
+### 11. (dynamic)
 
 TODO
 
-### 11. "emport"
+### 11. Aggregat emodules with `export from` ("emport")
 
 TODO
 
 ---
 
-// Exporting individual features
-export let name1, name2, …, nameN; // also var, const
-export let name1 = …, name2 = …, …, nameN; // also var, const
-export function functionName(){...}
-export class ClassName {...}
+## Other syntaxes not yet covered
 
-// Export list
-export { name1, name2, …, nameN };
-
-// Renaming exports
-export { variable1 as name1, variable2 as name2, …, nameN };
-
+```js
 // Exporting destructured assignments with renaming
 export const { name1, name2: bar } = o;
 
-// Default exports
-export default expression;
-export default function (…) { … } // also class, function*
-export default function name1(…) { … } // also class, function*
 export { name1 as default, … };
 
 // Aggregating modules
@@ -215,12 +205,4 @@ export _ as name1 from …; // Draft ECMAScript® 2O21
 export { name1, name2, …, nameN } from …;
 export { import1 as name1, import2 as name2, …, nameN } from …;
 export { default } from …;
-
----
-
-1. project setup
-1. global effects
-1. default export
-1. default types
-1. named exports
-1. re-named exports
+```

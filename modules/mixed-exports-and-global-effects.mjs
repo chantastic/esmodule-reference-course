@@ -1,3 +1,5 @@
+console.log("mixed-exports-and-global-effects.mjs is loaded.");
+
 let fallbackGreetingText = "there";
 
 export function greet(name = fallbackGreetingText) {

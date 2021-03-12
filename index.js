@@ -1,10 +1,3 @@
-// lesson 1: modules leak
-// * global code is global code, even if in a module
-// * this is useful for setup in a global environment like with styling in a React project.
-
-// import "./modules/global-effects.mjs";
-// console.log(global.test);
-
 // lesson 2: modules can be imported asyncronously
 // * how will the output change if we change this to a dynamic import?
 // * how can we fix it? with .then()
@@ -46,33 +39,6 @@
 // );
 // console.log(greet(defaultText));
 
-// new route from globals
-// * function can't be exported
-// * export block
-// * can we use object syntaxes? no. export blocks are not objects
-//   lens into why: export named, default, and renaming with as (value of import block)
-// * named exports with export keyword before function
-// * rename on export
-// * rename on import
-// * alternatives to block
-//   * can we have both block and named exports? 👍
-//   * what about block and default and named?
-// * how default looks in an export block
-// * change it to dynamic again to make sure we can do all the same things
-
-// modules
-// * export-list
-// * named-exports
-// * renamed-exports
-// * default-export
-// * mixed-exports
-// * global-effects
-// * mixed-exports-and-global-effects
-// * isolated-only
-
-// import "./modules/global-effects.mjs";
-// console.log(leak);
-
 // ---
 
 // 1
@@ -83,5 +49,10 @@
 // console.log(global.leak);
 
 // 3
-import("./modules/assignment.mjs");
-console.log("first???");
+// import("./modules/assignment.mjs");
+// console.log("first???");
+
+// example use of pre-formed modules
+// export-list
+import { chant } from "./modules/export-list.mjs";
+chant("We're number one");

@@ -1,16 +1,18 @@
 let fallbackGreetingText = "there";
 
-export function greet(name = fallbackGreetingText) {
+function greet(name = fallbackGreetingText) {
   return `Hello, ${name}!`;
 }
 
-export function hype(phrase) {
+function hype(phrase) {
   return `${phrase.toUpperCase()}!`;
 }
 
-export function chant(phrase) {
+function chant(phrase) {
   return [...Array(3)]
     .map(() => hype(phrase))
     .join(" ")
     .trim();
 }
+
+export { greet as greetName, hype as hypeString, chant as chantPhrase };

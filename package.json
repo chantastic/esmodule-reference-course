@@ -12,6 +12,7 @@
   "author": "Michael Chan <mijoch@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.7"
   }
 }
