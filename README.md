@@ -188,21 +188,3 @@ TODO
 ### 11. Aggregate modules with `export from` ("emport")
 
 TODO
-
----
-
-## Other syntaxes not yet covered
-
-```js
-// Exporting destructured assignments with renaming
-export const { name1, name2: bar } = o;
-
-export { name1 as default, … };
-
-// Aggregating modules
-export _ from …; // does not set the default export
-export _ as name1 from …; // Draft ECMAScript® 2O21
-export { name1, name2, …, nameN } from …;
-export { import1 as name1, import2 as name2, …, nameN } from …;
-export { default } from …;
-```
