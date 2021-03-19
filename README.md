@@ -191,3 +191,11 @@ TODO
 ### 11. Aggregate modules with `export from` ("emport")
 
 TODO
+
+### 12. Tree-shaking * as
+
+TODO
+
+### 13. Don't return an object as default
+
+TODO
