@@ -1,15 +1,24 @@
+// import * as assignmentMod from "./modules/assignment.mjs";
+import("./modules/assignment.mjs").then(
+  ({ genMitLicense, greeting: myGreet }) => {
+    console.log(myGreet());
+    console.log(genMitLicense("Geo Lessel"));
+  }
+);
 
-// 0. Cover the setup
-// 1. Import a module from the file system
-// 2. Make your module leak side-effects (temporarily)
-// 3. Import a module dynamically
-// 4. Add a function declaration and variable to the module
-// 5. Export using an export list
-// 6. Try (and fail) to use object destructuring with Imports
-// 7. Use `as` to alias (rename) imports and exports
-// 8. Export a named export inline
-// 9. Export a default with the `default` keyword
-// 10. Collect an entire module into an object with the
+// function greet(subject = defaultSubject) {
+//   return `Salutations, ${subject}!`;
+// }
+
+// console.log(assignmentMod.greet(assignmentMod.defaultSubject));
+// console.log(assignmentMod.otherGreet(assignmentMod.defaultSubject));
+// console.log(assignmentMod.greeting(assignmentMod.defaultSubject));
+
+// let myModule = "assignment";
+// import(`./modules/${myModule}.mjs`).then(() => {
+//   console.log(global.leak);
+// });
+
 // 11. Import module contents with dynamic imports
 // 11. Aggregate modules with `export from` ("emport")
 // 12. Eliminate unaccessed exports with tree-shaking
