@@ -24,35 +24,55 @@ With one line, you've imported [assignment.mjs][] into [index.js][].
 
 Modules can leak! This sounds bad — and it can be if not handled correctly.
 
-Our goal is to identy what features make modules leak.
+Let's identy what features make a module leak.
 
-### Add a console.log statement to assignment.mjs
+### `console.log` makes modules leak
 
-The first way to make a module leak is with `console.log`. If a module includes a module-level console.log statement, it will be logged when that module is imported.
+The first way to make a module leak is with `console.log`. If a module includes a module-level `console.log statement`, it will be exectuted when that module is imported.
 
 Add a `console.log` statement to [assignment.mjs].
 
+```js
+// assignment.mjs
+console.log("this will log when imported.");
+```
 
+### `global` assignments make modules leak
 
-The first thing to know about modules is that they leak. They don't perfectly encapsulate all code. Global code is global code, even if in a module.
+The second way to make modules like is with an assignment to `global`. These assignmentns will be added to the global environment when the module is imported.
 
-This might sounds bad (and it can be) but it's an important feature.
+Add a `global` assignment to [assignment.mjs][].
 
-#### Assignment
+```js
+// assignment.mjs
+global.thisIsEverywhere = "welcome to side-effects";
+```
 
-Add globally executing code to the `asignment.mjs` module — imported in the previous lesson.
-Globally executing code can be `console.log("assignments.mjs loaded.")` and/or an assignment like `global.leak = "oops! guess this is everywhere now!"`.
+Now this one requires some coordination to see.
 
-#### Discuss
+In [index.js][], log the value of `global.thisIsEverywhere`.
 
-Where may the automatic execution of global code be useful? Have you seen it in use before?
+```js
+//index.js
+console.log(global.thisIsEverywhere);
+```
 
-### 3. Import a module dynamically
+This was not imported from the module. It was added to the `global` object as a side-effect of the module being imported.
+
+In the following lessons, we'll cover how to import from a module.
+
+#### Consider this
+
+- Where may the automatic execution of global code be useful?
+- Have you seen it in use before?
+
+## 3. Import a module dynamically
 
 The `import` keyword has two variants.
-It can be static (as we've done up to this point) or it can be dynamic.
 
-You can change a static import to a dynamic import by adding parenthesis around the path string.
+Up to this point we've used the "static" `import`. Let's learn how to use the dynamic `import`.
+
+!!!you were here!!!
 
 - static import: `import "./modules/assignment.mjs";`
 - dynamic import: `import("./modules/assignment.mjs");`
