@@ -14,11 +14,11 @@ Import [assignment.mjs][] using the import keyword and providing the path as a s
 import "./modules/assignment.mjs";
 ```
 
-That's all for assignment one!
+That's all for this assignment!
 
 With one line, you've imported [assignment.mjs][] into [index.js][].
 
-[assignment.mjs][] doesn't have any code and that's fine. It only needs to exist for [index.js][] it find and import it.
+[assignment.mjs][] doesn't have any code yet and that's fine. It only needs to exist for [index.js][] it find and import it.
 
 ## 2. Add side-effects to a module
 
@@ -28,9 +28,9 @@ Let's identy what features make a module leak.
 
 ### `console.log` makes modules leak
 
-The first way to make a module leak is with `console.log`. If a module includes a module-level `console.log statement`, it will be exectuted when that module is imported.
+The first way to make a module leak is with `console.log`. If a module includes a module-level a `console.log` statement, it will be exectuted when that module is imported.
 
-Add a `console.log` statement to [assignment.mjs].
+Add a `console.log` statement to [assignment.mjs][] to see this in action.
 
 ```js
 // assignment.mjs
